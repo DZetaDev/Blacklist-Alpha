@@ -1,4 +1,4 @@
-This is a community-contributed list of [referrer spammers](http://en.wikipedia.org/wiki/Referer_spam) maintained by [DZeta](https://dzeta.biz/), the leading open source web analytics platform.
+This is a community-contributed list of [referrer spammers](http://en.wikipedia.org/wiki/Referer_spam) maintained by [DZeta](https://dzeta.biz/) - WordPress Web Developer and Designer.
 
 ## Usage
 
