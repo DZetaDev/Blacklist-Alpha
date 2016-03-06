@@ -29,21 +29,17 @@ Here is an example using PHP:
 $list = file('spammers_domains.txt', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
 ```
 
-### In DZeta
-
-This list is included in each [DZeta](https://dzeta.biz) release so that referrer spam is filtered automatically.
-
 ## Contributing
 
-To add a new referrer spammer to the list, [click here to edit the spammers_domains_ext.txt file](https://github.com/DZetaDev/Blacklist-Alpha/edit/master/spammers_domains_ext.txt) and create a pull request. Alternatively you can create a [new issue](https://github.com/DZetaDev/Spammers Blacklist/issues/new). In your issue or pull request please **explain where the referrer domain appeared and why you think it is a spammer**. You are highly encouraged to open **one pull request per new domain**.
+To add a new referrer spammer to the list, [click here to edit the spammers_domains_ext.txt file](https://github.com/DZetaDev/Blacklist-Alpha/edit/master/spammers_domains.txt) and create a pull request. Alternatively you can create a [new issue](https://github.com/DZetaDev/Blacklist-Alpha/issues/new). In your issue or pull request please **explain where the referrer domain appeared and why you think it is a spammer**. You are highly encouraged to open **one pull request per new domain**.
 
-To add a new referrer bad IP (Malware/Botnet/Spammer) to the list, [click here to edit the blacklist_ips.txt file](https://github.com/DZetaDev/Blacklist-Alpha/edit/master/blacklist_ips.txt) and create a pull request. Alternatively you can create a [new issue](https://github.com/DZetaDev/Spammers Blacklist/issues/new). In your issue or pull request please **explain where the referrer IP appeared and why you think it is a bad IP**. You are highly encouraged to open **one pull request per new IP**.
+To add a new referrer bad IP (Malware/Botnet/Spammer) to the list, [click here to edit the blacklist_ips.txt file](https://github.com/DZetaDev/Blacklist-Alpha/edit/master/blacklist_ips.txt) and create a pull request. Alternatively you can create a [new issue](https://github.com/DZetaDev/Blacklist-Alpha/issues/new). In your issue or pull request please **explain where the referrer IP appeared and why you think it is a bad IP**. You are highly encouraged to open **one pull request per new IP**.
 
-To add a new referrer e-mail to the list, [click here to edit blacklist_emails.txt file](https://github.com/DZetaDev/Blacklist-Alpha/edit/master/blacklist_ips.txt) and create a pull request. Alternatively you can create a [new issue](https://github.com/DZetaDev/Spammers Blacklist/issues/new). In your issue or pull request please **explain where the referrer IP appeared and why you think it is a bad e-mail**. You are highly encouraged to open **one pull request per new e-mail**.
+To add a new referrer e-mail to the list, [click here to edit blacklist_emails.txt file](https://github.com/DZetaDev/Blacklist-Alpha/edit/master/blacklist_emails.txt) and create a pull request. Alternatively you can create a [new issue](https://github.com/DZetaDev/Blacklist-Alpha/issues/new). In your issue or pull request please **explain where the referrer IP appeared and why you think it is a bad e-mail**. You are highly encouraged to open **one pull request per new e-mail**.
 
 If you open a pull request, it is appreciated if you keep one hostname per line, keep the list ordered alphabetically, and use [Linux line endings](http://en.wikipedia.org/wiki/Newline).
 
-Please [search](https://github.com/DZetaDev/Spammers Blacklist/issues) if somebody already reported the host before opening a new one.
+Please [search](https://github.com/DZetaDev/Blacklist-Alpha/issues) if somebody already reported the host before opening a new one.
 
 ### Subdomains
 
