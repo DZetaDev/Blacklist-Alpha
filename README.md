@@ -18,7 +18,7 @@ git clone https://github.com/DZetaDev/Blacklist-Alpha.git
 If you are using PHP, you can also install the list through Composer:
 
 ```
-composer require DZetaDev/Blacklist-Alpha
+composer require dzeta/blacklist-alpha
 ```
 
 Parsing the file should be pretty easy using your favorite language. Beware that the file can contain empty lines.
