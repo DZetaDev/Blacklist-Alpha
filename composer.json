@@ -1,5 +1,11 @@
 {
-    "name": "dzeta/blacklist-alpha",
-    "description": "List of referrer malicious sites ( spammers/malwares domains ), Blacklist emails and Blacklist IP",
-    "license": "MIT"
+  "name": "dzeta/blacklist-alpha",
+  "description": "List of referrer malicious sites ( spammers/malwares domains ), Blacklist emails and Blacklist IP",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "DZeta",
+      "homepage": "https://dzeta.biz/"
+    }
+  ]
 }

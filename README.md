@@ -1,5 +1,14 @@
 This is a community-contributed list of [referrer spammers](http://en.wikipedia.org/wiki/Referer_spam) maintained by [DZeta](https://dzeta.biz/) - WordPress Web Developer and Designer.
 
+- [Usage](#usage)
+    - [PHP](#php)
+    - [Nginx](#nginx)
+- [Contributing](#contributing)
+    - [Subdomains](#subdomains)
+    - [Sorting](#sorting)
+- [Disclaimer](#disclaimer)
+- [License](#license)
+
 ## Usage
 
 The list is stored in this repository in:
@@ -12,13 +21,15 @@ This texts files contains one host per line.
 You can download the [whole folder as zip](https://github.com/DZetaDev/Blacklist-Alpha/archive/master.zip) or clone the repository using git:
 
 ```
-git clone https://github.com/DZetaDev/Blacklist-Alpha.git
+git clone https://github.com/DZetaDev/Blacklist-Alpha.git blacklist-alpha
 ```
+
+### PHP
 
 If you are using PHP, you can also install the list through Composer:
 
 ```
-composer require dzeta/blacklist-alpha
+composer require dzeta/blacklist-alpha "dev-master"
 ```
 
 Parsing the file should be pretty easy using your favorite language. Beware that the file can contain empty lines.
@@ -28,6 +39,34 @@ Here is an example using PHP:
 ```php
 $list = file('spammers_domains.txt', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
 ```
+
+### Nginx
+
+Nginx's `server` block can be configured to check the referer and return an error:
+
+```nginx
+if ($http_referer ~ '0akley.cc') {return 403;}
+if ($http_referer ~ '1pamm.ru') {return 403;}
+```
+
+When combined, list exceeds the max length for a single regex expression, so hosts must be broken up as shown above.
+
+Here is a bash script to create an nginx conf file:
+```bash
+sort spammers_domains.txt | uniq | sed 's/\./\\\\./g' | while read host;
+do
+    echo "if (\$http_referer ~ '$host') {return 403;}" >> /etc/nginx/referer_spam.conf
+done;
+```
+
+you would then `include /etc/nginx/referer_spam.conf;` inside your `server` block
+
+Now as a daily cron job so the list stays up to date:
+
+```bash
+0 0 * * * cd /etc/nginx/blacklist-alpha/ && git pull > /dev/null && echo "" > /etc/nginx/referer_spam.conf && sort spammers_domains.txt | uniq | sed 's/\./\\\\\\\\./g' | while read host; do echo "if (\$http_referer ~ '$host') {return 403;}" >> /etc/nginx/referer_spam.conf; done; service nginx reload > /dev/null
+```
+
 
 ## Contributing
 
