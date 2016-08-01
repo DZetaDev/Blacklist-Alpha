@@ -1,3 +1,5 @@
+[![Under Development](https://img.shields.io/badge/under-development-orange.svg)](https://github.com/DZetaDev/Blacklist-Alpha) [![license](https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000)]()
+
 This is a community-contributed list of [referrer spammers](http://en.wikipedia.org/wiki/Referer_spam) maintained by [DZeta](https://dzeta.biz/) - WordPress Web Developer and Designer.
 
 - [Usage](#usage)
@@ -12,7 +14,7 @@ This is a community-contributed list of [referrer spammers](http://en.wikipedia.
 ## Usage
 
 The list is stored in this repository in:
-* Spammers Domains: `spammers_domains.txt` and `bad_domains_ext.txt`
+* Spammers Domains: `spammers_domains.txt`
 * Bad and Malwares Domains: `bad_domains_ext.txt`
 * Blacklist IPs: `blacklist_ips.txt`
 * Blacklist e-mails `blacklist_emails.txt`
@@ -80,6 +82,8 @@ To add a new referrer e-mail to the list, [click here to edit blacklist_emails.t
 If you open a pull request, it is appreciated if you keep one hostname per line, keep the list ordered alphabetically, and use [Linux line endings](http://en.wikipedia.org/wiki/Newline).
 
 Please [search](https://github.com/DZetaDev/Blacklist-Alpha/issues) if somebody already reported the host before opening a new one.
+
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) for more details.
 
 ### Subdomains
 
