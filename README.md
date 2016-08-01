@@ -12,7 +12,8 @@ This is a community-contributed list of [referrer spammers](http://en.wikipedia.
 ## Usage
 
 The list is stored in this repository in:
-* Spammers Domains: `spammers_domains.txt` and `spammers_domains_ext.txt`
+* Spammers Domains: `spammers_domains.txt` and `bad_domains_ext.txt`
+* Bad and Malwares Domains: `bad_domains_ext.txt`
 * Blacklist IPs: `blacklist_ips.txt`
 * Blacklist e-mails `blacklist_emails.txt`
 
