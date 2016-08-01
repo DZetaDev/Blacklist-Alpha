@@ -8,7 +8,7 @@ You are highly encouraged to open one pull request per new item(IP/Domain/e-mail
 
 Please review the [guidelines for contributing](CONTRIBUTING.md) to this repository.
 
-Ensure that your `pull request` has followed all the steps below:
+Ensure that your `pull request` has followed all the one below:
 
 - [ ] Spammer Domain.
 - [ ] Bad/Malware Domain.
