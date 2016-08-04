@@ -1,11 +1,35 @@
 {
   "name": "dzeta/blacklist-alpha",
   "description": "List of referrer malicious sites ( spammers/malwares domains ), Blacklist emails and Blacklist IP",
+  "version": "0.1.0",
   "license": "MIT",
   "authors": [
     {
       "name": "DZeta",
       "homepage": "https://dzeta.biz/"
     }
-  ]
+  ],
+  "config": {
+    "autoloader-suffix": "BlacklistAlpha",
+    "bin-dir": "blacklist_modules/php/bin",
+    "vendor-dir": "blacklist_modules/php/libs",
+    "preferred-install": "dist"
+  },
+  "autoload": {
+    "psr-4": {
+      "BlacklistAlpha\\": "blacklist_modules/php/classes"
+    },
+    "classmap": [
+      "blacklist_modules/php/classes"
+    ]
+  },
+  "require": {
+    "php": ">=5.4",
+    "symfony/polyfill-php56": "^1.2.0",
+    "mso/idna-convert": "0.9.1"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "~4.6",
+    "friendsofphp/php-cs-fixer": "~1.7"
+  }
 }

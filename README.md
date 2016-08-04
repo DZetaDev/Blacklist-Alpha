@@ -4,7 +4,9 @@ This is a community-contributed list of [referrer spammers](http://en.wikipedia.
 
 - [Usage](#usage)
     - [PHP](#php)
+    - [Apache](#apache)
     - [Nginx](#nginx)
+    - [Varnish](#varnish)
 - [Contributing](#contributing)
     - [Subdomains](#subdomains)
     - [Sorting](#sorting)
@@ -40,7 +42,53 @@ Parsing the file should be pretty easy using your favorite language. Beware that
 Here is an example using PHP:
 
 ```php
-$list = file('spammers_domains.txt', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+$list_txt = file('spammers_domains.txt', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+
+// Another alternative.
+$list_json = 'spammers_domains.json';
+$file = file_get_contents($list_json);
+$spammers_domains = json_decode($file);
+
+// OR
+$domainsFile = spammers_domains.txt;
+$fileList = fopen($domainsFile, 'r');
+```
+
+### Apache
+ 
+ .htaccess is a configuration file for use on web servers running Apache. This file is usually found in the root "public_html" folder of your website.
+  
+  The .htaccess file uses two modules to prevent referral spam, mod_rewrite and mod_setenvif. Decide which method is most suitable with your Apache server configuration. This file is **Apache 2.4** ready, where mod_authz_host got deprecated.
+ 
+```apache
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    RewriteCond %{HTTP_REFERER} ^http(s)?://(www.)?.*0akley\.cc.*$ [NC,OR]
+    RewriteCond %{HTTP_REFERER} ^http(s)?://(www.)?.*1pamm\.ru.*$ [NC] ## [NC] On last domain.
+    RewriteRule ^(.*)$ – [F,L]
+</IfModule>
+
+<IfModule mod_setenvif.c>
+    SetEnvIfNoCase Referer 0akley\.cc spambot=yes
+    SetEnvIfNoCase Referer 1pamm\.ru spambot=yes
+</IfModule>
+
+# Apache 2.2
+<IfModule !mod_authz_core.c>
+    <IfModule mod_authz_host.c>
+        Order allow,deny
+        Allow from all
+        Deny from env=spambot
+    </IfModule>
+</IfModule>
+# Apache 2.4
+<IfModule mod_authz_core.c>
+    <RequireAll>
+        Require all granted
+        Require not env spambot
+    </RequireAll>
+</IfModule>
 ```
 
 ### Nginx
@@ -70,6 +118,32 @@ Now as a daily cron job so the list stays up to date:
 0 0 * * * cd /etc/nginx/blacklist-alpha/ && git pull > /dev/null && echo "" > /etc/nginx/referer_spam.conf && sort spammers_domains.txt | uniq | sed 's/\./\\\\\\\\./g' | while read host; do echo "if (\$http_referer ~ '$host') {return 403;}" >> /etc/nginx/referer_spam.conf; done; service nginx reload > /dev/null
 ```
 
+Otherwise, you can use `referral_spam.conf` in `/etc/nginx`, include it globally from within `/etc/nginx/nginx.conf`:
+
+```conf
+http {
+    include referral-spam.conf;
+}
+```
+
+Add the following to each `/etc/nginx/site-available/your-site.conf` that needs protection:
+
+```conf
+server {
+    if ($bad_referer) {
+        return 444;
+    }
+}
+```
+
+### Varnish
+
+Add `referral_spam.vcl` to **Varnish 4** default file: `default.vcl` by adding the following code right underneath your default backend definitions
+
+```conf
+include "referral_spam.vcl";
+sub vcl_recv { call block_referral_spam; }
+```
 
 ## Contributing
 
