@@ -121,7 +121,7 @@ class Spammers_Domains
     public function createNginx($date, array $lines)
     {
         $file = __DIR__ . '/../../../referral_spam.conf';
-        $data = "# " . $this->projectUrl . "\n# Updated " . $date . "\n#\n# /etc/nginx/referral-spam.conf\n#\n# With referral-spam.conf in /etc/nginx, include it globally from within /etc/nginx/nginx.conf:\n#\n#     include referral-spam.conf;\n#\n# Add the following to each /etc/nginx/site-available/your-site.conf that needs protection:\n#\n#      server {\n#        if (\$bad_referer) {\n#          return 403;\n#        }\n#      }\n#\nmap \$http_referer \$bad_referer {\n\tdefault 0;\n\n";
+        $data = "# " . $this->projectUrl . "\n# Updated " . $date . "\n#\n# /etc/nginx/referral_spam.conf\n#\n# With referral_spam.conf in /etc/nginx, include it globally from within /etc/nginx/nginx.conf:\n#\n#     include referral_spam.conf;\n#\n# Add the following to each /etc/nginx/site-available/your-site.conf that needs protection:\n#\n#      server {\n#        if (\$bad_referer) {\n#          return 403;\n#        }\n#      }\n#\nmap \$http_referer \$bad_referer {\n\tdefault 0;\n\n";
         foreach ($lines as $line) {
             $data .= "\t\"~*" . preg_quote($line) . "\" 1;\n";
         }
@@ -130,7 +130,7 @@ class Spammers_Domains
         if (file_exists($file) && is_readable($file) && is_writable($file)) {
             file_put_contents($file, $data);
             if (!chmod($file, 0644)) {
-                trigger_error("Couldn't not set referral-spam.conf permissions to 644");
+                trigger_error("Couldn't not set referral_spam.conf permissions to 644");
             }
         } else {
             trigger_error('Permission denied');
@@ -161,7 +161,7 @@ class Spammers_Domains
         if (file_exists($file) && is_readable($file) && is_writable($file)) {
             file_put_contents($file, $data);
             if (!chmod($file, 0644)) {
-                trigger_error("Couldn't not set referral-spam.vcl permissions to 644");
+                trigger_error("Couldn't not set referral_spam.vcl permissions to 644");
             }
         } else {
             trigger_error('Permission denied');

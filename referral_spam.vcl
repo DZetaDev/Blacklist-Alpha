@@ -1,5 +1,5 @@
 # https://github.com/DZetaDev/Blacklist-Alpha
-# Updated 2016-08-04 02:13:09
+# Updated 2016-08-04 14:51:29
 sub block_referral_spam {
 	if (
 		req.http.Referer ~ "(?i)0akley\.cc" ||
