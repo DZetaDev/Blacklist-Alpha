@@ -18,8 +18,7 @@ npm-debug.log
 ## Composer ##
 composer.phar
 /vendor/
-blacklist_modules/php/bin/*
-!blacklist_modules/php/bin/.gitkeep
+blacklist_modules/php/bin/
 blacklist_modules/php/libs/
 blacklist_modules/php/build/
 composer.lock

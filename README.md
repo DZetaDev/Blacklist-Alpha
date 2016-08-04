@@ -1,6 +1,6 @@
 [![Under Development](https://img.shields.io/badge/under-development-orange.svg)](https://github.com/DZetaDev/Blacklist-Alpha) [![license](https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000)]()
 
-This is a community-contributed list of [referrer spammers](http://en.wikipedia.org/wiki/Referer_spam) maintained by [DZeta](https://dzeta.biz/) - WordPress Web Developer and Designer.
+This is a community-contributed list of [referrer spammers](http://en.wikipedia.org/wiki/Referer_spam), Malwares Domains, Bad IPs and Bad e-mails maintained by [DZeta](https://dzeta.biz/) - WordPress Web Developer and Designer.
 
 - [Usage](#usage)
     - [PHP](#php)
