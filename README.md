@@ -50,7 +50,7 @@ $file = file_get_contents($list_json);
 $spammers_domains = json_decode($file);
 
 // OR
-$domainsFile = spammers_domains.txt;
+$domainsFile = 'spammers_domains.txt';
 $fileList = fopen($domainsFile, 'r');
 ```
 
@@ -131,7 +131,7 @@ Add the following to each `/etc/nginx/site-available/your-site.conf` that needs 
 ```conf
 server {
     if ($bad_referer) {
-        return 444;
+        return 403;
     }
 }
 ```
