@@ -1,5 +1,5 @@
 # https://github.com/DZetaDev/Blacklist-Alpha
-# Updated 2017-03-24 18:35:15
+# Updated 2017-05-15 16:35:59
 sub block_referral_spam {
 	if (
 		req.http.Referer ~ "(?i)0akley\.cc" ||
@@ -454,6 +454,7 @@ sub block_referral_spam {
 		req.http.Referer ~ "(?i)dynawinnifred\.com" ||
 		req.http.Referer ~ "(?i)dzttugzqej\.cn" ||
 		req.http.Referer ~ "(?i)e\-buyeasy\.com" ||
+		req.http.Referer ~ "(?i)e\-commerce\-seo\.com" ||
 		req.http.Referer ~ "(?i)e\-commerce\-seo1\.com" ||
 		req.http.Referer ~ "(?i)e\-finanzas\.info" ||
 		req.http.Referer ~ "(?i)e\-kwiaciarz\.pl" ||
@@ -1565,8 +1566,8 @@ sub block_referral_spam {
 		req.http.Referer ~ "(?i)teresantte\.com" ||
 		req.http.Referer ~ "(?i)thecoral\.com\.br" ||
 		req.http.Referer ~ "(?i)theguardlan\.com" ||
-		req.http.Referer ~ "(?i)themeforest\.net" ||
 		req.http.Referer ~ "(?i)thepokertimer\.com" ||
+		req.http.Referer ~ "(?i)thesmartsearch\.net" ||
 		req.http.Referer ~ "(?i)thirtyfiveeightcharmingjoins\.com" ||
 		req.http.Referer ~ "(?i)thirtysevenfourimportantsources\.com" ||
 		req.http.Referer ~ "(?i)tinamarcia\.com" ||
@@ -1596,6 +1597,7 @@ sub block_referral_spam {
 		req.http.Referer ~ "(?i)touchmods\.fr" ||
 		req.http.Referer ~ "(?i)toyota\.7zap\.com" ||
 		req.http.Referer ~ "(?i)tracietrudie\.com" ||
+		req.http.Referer ~ "(?i)track\-rankings\.online" ||
 		req.http.Referer ~ "(?i)traffic\-cash\.xyz" ||
 		req.http.Referer ~ "(?i)traffic2cash\.net" ||
 		req.http.Referer ~ "(?i)traffic2cash\.org" ||
@@ -1745,7 +1747,51 @@ sub block_referral_spam {
 		req.http.Referer ~ "(?i)xn\-\-\-\-7sbho2agebbhlivy\.xn\-\-p1ai" ||
 		req.http.Referer ~ "(?i)xn\-\-\-\-8sbhefaln6acifdaon5c6f4axh\.xn\-\-p1ai" ||
 		req.http.Referer ~ "(?i)xn\-\-\-\-ctbffabdpc7ajihmbqm5c\.xn\-\-p1ai" ||
-		req.http.Referer ~ "(?i)xn\-\-\-\-gtbdb0beu1bb8gj\.xn\-\-p1ai"
+		req.http.Referer ~ "(?i)xn\-\-\-\-gtbdb0beu1bb8gj\.xn\-\-p1ai" ||
+		req.http.Referer ~ "(?i)xn\-\-\-\-itbocfibffavsc0m\.xn\-\-p1ai" ||
+		req.http.Referer ~ "(?i)xn\-\-\-21\-8cdgdjjaeexc8a0bkqs\.xn\-\-p1ai" ||
+		req.http.Referer ~ "(?i)xn\-\-80aanaardaperhcem4a6i\.com" ||
+		req.http.Referer ~ "(?i)xn\-\-80adaggc5bdhlfamsfdij4p7b\.xn\-\-p1ai" ||
+		req.http.Referer ~ "(?i)xn\-\-80adgcaax6acohn6r\.xn\-\-p1ai" ||
+		req.http.Referer ~ "(?i)xn\-\-90acenikpebbdd4f6d\.xn\-\-p1ai" ||
+		req.http.Referer ~ "(?i)xn\-\-c1acygb\.xn\-\-p1ai" ||
+		req.http.Referer ~ "(?i)xpznhxyhcd\.au" ||
+		req.http.Referer ~ "(?i)xvrcvco\.au" ||
+		req.http.Referer ~ "(?i)y3ys\.com" ||
+		req.http.Referer ~ "(?i)yahoo\-action\.com" ||
+		req.http.Referer ~ "(?i)yeartwit\.com" ||
+		req.http.Referer ~ "(?i)yeika\.us" ||
+		req.http.Referer ~ "(?i)ykecwqlixx\.ru" ||
+		req.http.Referer ~ "(?i)ylazomgisl\.br" ||
+		req.http.Referer ~ "(?i)yonlsi\.com" ||
+		req.http.Referer ~ "(?i)youjustaworkqueen\.com" ||
+		req.http.Referer ~ "(?i)youporn\-forum\.ga" ||
+		req.http.Referer ~ "(?i)youporn\-forum\.uni\.me" ||
+		req.http.Referer ~ "(?i)youporn\-ru\.com" ||
+		req.http.Referer ~ "(?i)your\-apple\-watch\.ru" ||
+		req.http.Referer ~ "(?i)yourbestinsurancebid\.com" ||
+		req.http.Referer ~ "(?i)yourobo\.com" ||
+		req.http.Referer ~ "(?i)yourserverisdown\.com" ||
+		req.http.Referer ~ "(?i)youtubedownload\.org" ||
+		req.http.Referer ~ "(?i)yt9x\.com" ||
+		req.http.Referer ~ "(?i)yujee\.us" ||
+		req.http.Referer ~ "(?i)yurgorod\.ru" ||
+		req.http.Referer ~ "(?i)yvonnetiff\.com" ||
+		req.http.Referer ~ "(?i)yyqhlztfssaw\.eu" ||
+		req.http.Referer ~ "(?i)yzfzh\.com" ||
+		req.http.Referer ~ "(?i)z\-07c\.info" ||
+		req.http.Referer ~ "(?i)zabava\-bel\.ru" ||
+		req.http.Referer ~ "(?i)zastroyka\.org" ||
+		req.http.Referer ~ "(?i)zazagames\.org" ||
+		req.http.Referer ~ "(?i)zcblr\.cn" ||
+		req.http.Referer ~ "(?i)zoibit\.com" ||
+		req.http.Referer ~ "(?i)zoominfo\.com" ||
+		req.http.Referer ~ "(?i)zuzanacharlot\.com" ||
+		req.http.Referer ~ "(?i)zverokruh\-shop\.cz" ||
+		req.http.Referer ~ "(?i)zvetki\.ru" ||
+		req.http.Referer ~ "(?i)zwefh\.us" ||
+		req.http.Referer ~ "(?i)zzlgxh\.com" ||
+		req.http.Referer ~ "(?i)zzo8\.com"
 	) {
 			return (synth(403, "Forbidden"));
 	}

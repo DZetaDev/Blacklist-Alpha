@@ -17,7 +17,7 @@ use Mso\IdnaConvert\IdnaConvert;
  * Class Spammers_Domains
  * @package DZeta\BlacklistAlpha\SpammersDomains
  */
-class Spammers_Domains
+class SpammersDomains
 {
 
     private $projectUrl = 'https://github.com/DZetaDev/Blacklist-Alpha';
@@ -71,8 +71,6 @@ class Spammers_Domains
         sort($uniqueLines, SORT_STRING);
         if (is_writable($domainsFile)) {
             file_put_contents($domainsFile, implode("\n", $uniqueLines));
-        } else {
-            trigger_error('Permission denied');
         }
 
         return $lines;
@@ -108,8 +106,6 @@ class Spammers_Domains
                 trigger_error("Couldn't not set .htaccess permissions to 644");
             }
 
-        } else {
-            trigger_error('Permission denied');
         }
     }
 
@@ -132,8 +128,6 @@ class Spammers_Domains
             if (!chmod($file, 0644)) {
                 trigger_error("Couldn't not set referral_spam.conf permissions to 644");
             }
-        } else {
-            trigger_error('Permission denied');
         }
     }
 
@@ -163,8 +157,6 @@ class Spammers_Domains
             if (!chmod($file, 0644)) {
                 trigger_error("Couldn't not set referral_spam.vcl permissions to 644");
             }
-        } else {
-            trigger_error('Permission denied');
         }
     }
 
@@ -183,9 +175,6 @@ class Spammers_Domains
 
         if (file_exists($file) && is_readable($file) && is_writable($file)) {
             file_put_contents($file, $data);
-        } else {
-            trigger_error('Permission denied');
         }
-
     }
 }

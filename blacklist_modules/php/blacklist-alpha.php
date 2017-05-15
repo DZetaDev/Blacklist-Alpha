@@ -10,13 +10,13 @@
 
 namespace DZeta\BlacklistAlpha\Main;
 
-use DZeta\BlacklistAlpha\SpammersDomains\Spammers_Domains;
+use DZeta\BlacklistAlpha\SpammersDomains\SpammersDomains;
 
 // At start of script.
 $time_start = microtime(true);
 
-if (version_compare(PHP_VERSION, '5.4', '<')) {
-    trigger_error(' requires PHP version 5.4 or higher', E_USER_ERROR);
+if (version_compare(PHP_VERSION, '5.6', '<')) {
+    trigger_error(' requires PHP version 5.6 or higher', E_USER_ERROR);
 }
 
 define('SPAMMERS_DOMAINS_TXT', '../../spammers_domains.txt');
@@ -32,7 +32,7 @@ require_once __DIR__ . '/libs/autoload.php';
  *
  * @since 0.1.0
  */
-new Spammers_Domains();
+new SpammersDomains();
 
 // Finish.
 echo 'Total execution time in seconds: ' . (microtime(true) - $time_start);
