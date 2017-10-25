@@ -21,4 +21,4 @@ composer.phar
 blacklist_modules/php/bin/
 blacklist_modules/php/libs/
 blacklist_modules/php/build/
-composer.lock
+#composer.lock
