@@ -1,5 +1,5 @@
 # https://github.com/DZetaDev/Blacklist-Alpha
-# Updated 2017-10-25 17:31:00
+# Updated 2018-02-08 17:51:23
 sub block_referral_spam {
 	if (
 		req.http.Referer ~ "(?i)0akley\.cc" ||
@@ -22,6 +22,7 @@ sub block_referral_spam {
 		req.http.Referer ~ "(?i)3\-letter\-domains\.net" ||
 		req.http.Referer ~ "(?i)3g2upl4pq6kufc4m\.onion" ||
 		req.http.Referer ~ "(?i)3vzx\.com" ||
+		req.http.Referer ~ "(?i)3waynetworks\.com" ||
 		req.http.Referer ~ "(?i)45tahunkhongguan\.com" ||
 		req.http.Referer ~ "(?i)4cfa\.com" ||
 		req.http.Referer ~ "(?i)4istoshop\.com" ||
@@ -120,6 +121,7 @@ sub block_referral_spam {
 		req.http.Referer ~ "(?i)android\-style\.com" ||
 		req.http.Referer ~ "(?i)anerazerel\.com" ||
 		req.http.Referer ~ "(?i)anghiarihotel\.com" ||
+		req.http.Referer ~ "(?i)animalphotos\.xyz" ||
 		req.http.Referer ~ "(?i)annicenessy\.com" ||
 		req.http.Referer ~ "(?i)annorajanean\.com" ||
 		req.http.Referer ~ "(?i)anonymous\-redirect\.com" ||
@@ -178,6 +180,7 @@ sub block_referral_spam {
 		req.http.Referer ~ "(?i)bbtec\.net" ||
 		req.http.Referer ~ "(?i)bc\-lass\.ru" ||
 		req.http.Referer ~ "(?i)bdoab\.us" ||
+		req.http.Referer ~ "(?i)bedroomlighting\.us" ||
 		req.http.Referer ~ "(?i)befitmalty\.com" ||
 		req.http.Referer ~ "(?i)befoggorge\.com" ||
 		req.http.Referer ~ "(?i)beintones\.com" ||
@@ -361,6 +364,7 @@ sub block_referral_spam {
 		req.http.Referer ~ "(?i)coolarchitecturalmodeling\.info" ||
 		req.http.Referer ~ "(?i)cooldomainname\.ws" ||
 		req.http.Referer ~ "(?i)copyrightclaims\.org" ||
+		req.http.Referer ~ "(?i)copyrightinstitute\.org" ||
 		req.http.Referer ~ "(?i)coratommie\.com" ||
 		req.http.Referer ~ "(?i)corinnaterrijo\.com" ||
 		req.http.Referer ~ "(?i)corpboston\.com" ||
@@ -392,6 +396,7 @@ sub block_referral_spam {
 		req.http.Referer ~ "(?i)day\-night\-hookups\.com" ||
 		req.http.Referer ~ "(?i)dazedminor\.pw" ||
 		req.http.Referer ~ "(?i)dbutton\.net" ||
+		req.http.Referer ~ "(?i)dcdcapital\.com" ||
 		req.http.Referer ~ "(?i)debeereba\.com" ||
 		req.http.Referer ~ "(?i)deladominica\.com" ||
 		req.http.Referer ~ "(?i)delfin\-aqua\.com\.ua" ||
@@ -1440,6 +1445,8 @@ sub block_referral_spam {
 		req.http.Referer ~ "(?i)seo\-platform\.com" ||
 		req.http.Referer ~ "(?i)seo\-smm\.kz" ||
 		req.http.Referer ~ "(?i)seoanalyses\.com" ||
+		req.http.Referer ~ "(?i)seocheckupx\.com" ||
+		req.http.Referer ~ "(?i)seocheckupx\.net" ||
 		req.http.Referer ~ "(?i)seoexperimenty\.ru" ||
 		req.http.Referer ~ "(?i)seojokes\.net" ||
 		req.http.Referer ~ "(?i)seopub\.net" ||
@@ -1558,6 +1565,7 @@ sub block_referral_spam {
 		req.http.Referer ~ "(?i)start\.myplaycity\.com" ||
 		req.http.Referer ~ "(?i)steame\.ru" ||
 		req.http.Referer ~ "(?i)stiltribs\.com" ||
+		req.http.Referer ~ "(?i)stocktwists\.com" ||
 		req.http.Referer ~ "(?i)streha\-metalko\.si" ||
 		req.http.Referer ~ "(?i)stripe00\.com" ||
 		req.http.Referer ~ "(?i)stuheydon\.com" ||
@@ -1607,6 +1615,7 @@ sub block_referral_spam {
 		req.http.Referer ~ "(?i)terakeet\.com" ||
 		req.http.Referer ~ "(?i)teresantte\.com" ||
 		req.http.Referer ~ "(?i)tgtclick\.com" ||
+		req.http.Referer ~ "(?i)theautoprofit\.ml" ||
 		req.http.Referer ~ "(?i)thecoral\.com\.br" ||
 		req.http.Referer ~ "(?i)theguardlan\.com" ||
 		req.http.Referer ~ "(?i)thepokertimer\.com" ||
@@ -1683,6 +1692,9 @@ sub block_referral_spam {
 		req.http.Referer ~ "(?i)updatecenters\.info" ||
 		req.http.Referer ~ "(?i)upeuh\.us" ||
 		req.http.Referer ~ "(?i)uppdryds\.it" ||
+		req.http.Referer ~ "(?i)uptime\-as\.net" ||
+		req.http.Referer ~ "(?i)uptime\-eu\.net" ||
+		req.http.Referer ~ "(?i)uptime\-us\.net" ||
 		req.http.Referer ~ "(?i)uptime\.com" ||
 		req.http.Referer ~ "(?i)uptimebot\.net" ||
 		req.http.Referer ~ "(?i)uptimechecker\.com" ||
